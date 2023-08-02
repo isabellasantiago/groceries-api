@@ -2,8 +2,8 @@ import { Request, Response } from "express";
 import { Readable } from 'stream';
 import readline from 'readline';
 import IProductsController from "./interfaces/products";
-import IProducts from "../common/entities/interfaces/Products";
-import { client } from "../infra/database/client";
+import IProducts from "../entities/interfaces/Products";
+import { client } from "../database/client";
 
 export default class ProductsController implements IProductsController {    
     async readFile(request: Request, response: Response): Promise<Response> {
