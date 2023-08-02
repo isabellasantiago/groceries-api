@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ES2019",
     "module": "commonjs",
     "outDir": "./dist",
-    "types": [ "node", "jest" ],
     "strict": true,
-    "resolveJsonModule": true,
     "noImplicitAny": true,
     "esModuleInterop": true
   },
-  "include": ["."],
   "exclude": ["**/*.spec.ts"]
 }

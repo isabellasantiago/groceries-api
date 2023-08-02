@@ -6,9 +6,10 @@
   "scripts": {
     "compile": "tsc",
     "dev": "ts-node-dev src/server.ts",
-    "test": "jest -c ./jest-unit-json",
-    "test:coverage": "jest --coverage -c ./jest.uni.json",
-    "migrate": "npx prisma migrate"
+    "test": "jest -c ./jest.unit.json",
+    "test:coverage": "jest --coverage -c ./jest.unit.json",
+    "migrate": "npx prisma migrate",
+    "build": "tsc --project ./ts.config.json"
   },
   "author": "isabella Santiago",
   "license": "ISC",

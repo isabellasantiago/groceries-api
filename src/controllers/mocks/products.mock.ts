@@ -1,3 +1,5 @@
+import IProducts from "../../entities/interfaces/Products";
+
 export const productsMock = [
     {
         id: '193633e3-b4b3-4003-b3a0-ccdfe86bf0a8',
