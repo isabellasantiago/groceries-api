@@ -63,9 +63,20 @@ export default class ProductsController implements IProductsController {
 
             const products = await client.products.findMany({
                 where: {
-                    description: {
-                        contains: String(query)
-                    }
+                    OR: [
+                        {
+                            description: {
+                                contains: String(query),
+                                mode: 'insensitive'
+                            }
+                        },
+                        {
+                            code_bar: {
+                                contains: String(query),
+                                mode: 'insensitive'
+                            }
+                        }
+                    ]
                 }
             })
 

@@ -1,12 +1,11 @@
 
 import readline from 'readline';
-import IProducts from "../common/entities/interfaces/Products";
-import { IDb } from "../repository/db.interface";
-import { IProductsServices } from "./products.interface";
-import DbRepository from '../repository/db';
+import { IDb, DbRepository } from "../../../repository";
+import { IPostFileUC } from './post-file.interface';
+import IProducts from '../../../common/entities/interfaces/Products';
 
 
-export default class ProductsServices implements IProductsServices {
+export class PostFileUseCase implements IPostFileUC {
     private readonly dbRepository: IDb = new DbRepository();
     constructor() { }
 
@@ -50,9 +49,5 @@ export default class ProductsServices implements IProductsServices {
         }
 
         return products
-    }
-
-    async findProduct(query: string): Promise<Array<IProducts>> {
-        return this.dbRepository.findProduct(query)
     }
 }

@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import IProducts from "../common/entities/interfaces/Products";
 import { IDb } from "./db.interface";
 
-export default class DbRepository implements IDb{
+export class DbRepository implements IDb{
     client: PrismaClient = new PrismaClient();
 
     async create(data: IProducts): Promise<IProducts> {
